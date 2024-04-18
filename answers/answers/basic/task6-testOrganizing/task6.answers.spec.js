@@ -56,55 +56,55 @@ test.describe('task 6 test set', () => {
         });
 
         await test.step('Accept cookies', async () => {
-        //We accept cookies first, to not block the view of the elements we are looking for. You can turn them off in more "smart" way, but for now, this is enough.
-        const accecptCookiesButton = page.getByTestId('uc-accept-all-button');
-        await accecptCookiesButton.waitFor({ state: 'visible' });
-        await accecptCookiesButton.click();
+            //We accept cookies first, to not block the view of the elements we are looking for. You can turn them off in more "smart" way, but for now, this is enough.
+            const accecptCookiesButton = page.getByTestId('uc-accept-all-button');
+            await accecptCookiesButton.waitFor({ state: 'visible' });
+            await accecptCookiesButton.click();
         });
 
-        
+
         await test.step('Navigate to newsletter', async () => {
-        //click on the menu button
-        await menuButton.click();
+            //click on the menu button
+            await menuButton.click();
 
-        //click on the 'About us' menu item
-        await aboutUsMenuItem.click();
+            //click on the 'About us' menu item
+            await aboutUsMenuItem.click();
 
-        //click on the 'Newsletter' menu item
-        await newsletterMenuItem.click();
+            //click on the 'Newsletter' menu item
+            await newsletterMenuItem.click();
         });
 
         await test.step('Fill the form', async () => {
-        //select first option in 'Salutation' select item. You can also use value of the element
-        await salutationSelect.selectOption({ index: 1 });
+            //select first option in 'Salutation' select item. You can also use value of the element
+            await salutationSelect.selectOption({ index: 1 });
 
-        //fill the input fields with 'John', 'Doe' and 'test@email'
-        await firstNameInput.fill(testData.firstName);
-        await lastNameInput.fill(testData.lastName);
-        await emailInput.fill(testData.email);
+            //fill the input fields with 'John', 'Doe' and 'test@email'
+            await firstNameInput.fill(testData.firstName);
+            await lastNameInput.fill(testData.lastName);
+            await emailInput.fill(testData.email);
 
-        //activate checkbox 'I would like to subscribe to the newsletter'
-        await subscribeCheckbox.check();
+            //activate checkbox 'I would like to subscribe to the newsletter'
+            await subscribeCheckbox.check();
         });
 
         await test.step('Assertions', async () => {
-        await expect(menuButton).toBeVisible();
+            await expect(menuButton).toBeVisible();
 
-        await expect(emailInput).toBeEditable();
+            await expect(emailInput).toBeEditable();
 
-        await expect(subscribeCheckbox).toBeChecked();
+            await expect(subscribeCheckbox).toBeChecked();
 
-        await expect(aboutUsMenuItem).toBeHidden();
+            await expect(aboutUsMenuItem).toBeHidden();
 
-        await expect(salutationSelect).toHaveAttribute('aria-invalid', 'false');
+            await expect(salutationSelect).toHaveAttribute('aria-invalid', 'false');
 
-        const optionsCount = await salutationSelect.locator('option').count();
+            const optionsCount = await salutationSelect.locator('option').count();
 
-        const salutationLabel = page.locator("label[for='newsletter-newsletter.Title']");
+            const salutationLabel = page.locator("label[for='newsletter-newsletter.Title']");
 
-        expect(optionsCount).toBe(4);
+            expect(optionsCount).toBe(4);
 
-        await expect(salutationLabel).not.toHaveText('Error');
+            await expect(salutationLabel).not.toHaveText('Error');
         });
     });
 
