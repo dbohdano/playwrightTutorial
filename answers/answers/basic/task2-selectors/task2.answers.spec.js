@@ -8,8 +8,8 @@ import { test,expect } from '@playwright/test';
   -Check if h1 element with the text 'We Humanise the Digital' is visible
   -Create locator for footer element
   -Check if footer element is visible
-  -run the test with the command 'npm run test:tasks2'
-  -at the end, you should have a one test passed
+  -Run the test with the command 'npm run test:tasks2'
+  -In the end, you should have a one test passed
   
   Helpful links:
   https://playwright.dev/docs/api/class-locator - all about Locators

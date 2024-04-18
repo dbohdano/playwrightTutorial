@@ -12,8 +12,8 @@ import { test, expect } from '@playwright/test';
   -Check if 'Salutation' select item has attribute 'aria-invalid' equal to 'false'
   -Use non-retrying assertion to check if 'Salutation' select item has exactly 4 options. Hint: use locator binding to get 'option' count from 'Salutation' select item
   -Then, use .not assertion to check, if 'Salutation' label has not text 'Error'. Don't forget to create a locator for the label
-  -Run the test with the command 'npm run test:tasks4'
-  -At the end, you should have a one test passed
+  -run the test with the command 'npm run test:tasks4'
+  -at the end, you should have a one test passed
   
   Helpful links:
   https://playwright.dev/docs/test-assertions - all about assertions
@@ -43,6 +43,8 @@ test('task4', async ({ page }) => {
 
     //first we need to navigate to the root page
     await page.goto('/');
+
+
 
     //We accept cookies first, to not block the view of the elements we are looking for. You can turn them off in more "smart" way, but for now, this is enough.
     const accecptCookiesButton = page.getByTestId('uc-accept-all-button');
@@ -96,22 +98,4 @@ test('task4', async ({ page }) => {
 
     //START HERE: Write your test below this line
 
-    await expect(menuButton).toBeVisible();
-
-    await expect(emailInput).toBeEditable();
-
-    await expect(subscribeCheckbox).toBeChecked();
-
-    await expect(aboutUsMenuItem).toBeHidden();
-
-    await expect(salutationSelect).toHaveAttribute('aria-invalid', 'false');
-
-    const optionsCount = await salutationSelect.locator('option').count();
-
-    const salutationLabel = page.locator("label[for='newsletter-newsletter.Title']");
-
-    //Pay attention! Non-retrying assertions do not require await, because... they do not wait :)
-    expect(optionsCount).toBe(4);
-
-    await expect(salutationLabel).not.toHaveText('Error');
 });

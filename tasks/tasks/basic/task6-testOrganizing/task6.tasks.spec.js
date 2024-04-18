@@ -1,35 +1,18 @@
 import { test, expect } from '@playwright/test';
 
 /*
-  And now, the most important part, assertions!
-  Assertions are used to check if condition is fulfilled, for example if element is visible, or if the text is correct.
+  Congratulations! You fixed your test. Now, let's make it more readable and organized, so next time you will fix it faster.
+  We have few different orginizing units in Playwright. We can group tests in sets, and separetes them with test steps.
   Here is what you need to do:
-  -Modify previos test from task3 and add assertions
-  -Check if menu button is visible
-  -Check if email input is editable
-  -Check if 'I would like to subscribe to the newsletter' checkbox is checked
-  -Check if the 'About us' menu item is hidden
-  -Check if 'Salutation' select item has attribute 'aria-invalid' equal to 'false'
-  -Use non-retrying assertion to check if 'Salutation' select item has exactly 4 options. Hint: use locator binding to get 'option' count from 'Salutation' select item
-  -Then, use .not assertion to check, if 'Salutation' label has not text 'Error'. Don't forget to create a locator for the label
-  -Run the test with the command 'npm run test:tasks4'
-  -At the end, you should have a one test passed
+  -Modify previos test from task4 and separate it into steps
+  -Add test to test set with title 'task 6 test set'
+  -run the test with the command 'npm run test:tasks6'
+  -at the end, you should have a one test passed
   
   Helpful links:
-  https://playwright.dev/docs/test-assertions - all about assertions
-  https://playwright.dev/docs/test-assertions#non-retrying-assertions - about non-retrying assertions
-  https://playwright.dev/docs/test-assertions#auto-retrying-assertions - about auto-retrying assertions
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-have-attribute - how to check if element has attribute
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-editable - how to check if element is editable
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-checked - how to check if checkbox is checked
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-hidden - how to check if element is hidden
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible - how to check if element is visible
-  https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-not = .not assertion proprety
-  Hint:
-  -Don't forget about difference beetwen auto-retrying and non-retrying assertions. 
-  -Auto-retrying assertions are less flaky and "wait" until the condition is fullfiled. 
-  -Non-retrying assertions are more flaky and throw an error immediately if the condition is not fullfiled.
-  -Don't use non-retrying assertions to check if element is visible, we will learn how to "retry" non-retrying assertions in advanced tasks.
+  https://playwright.dev/docs/api/class-test#test-describe - how to group tests in sets
+  https://playwright.dev/docs/api/class-test#test-step - how to separate test into steps
+  
 
 */
 
@@ -39,7 +22,7 @@ const testData = {
     email: 'test@email'
 };
 
-test('task4', async ({ page }) => {
+test('task6', async ({ page }) => {
 
     //first we need to navigate to the root page
     await page.goto('/');

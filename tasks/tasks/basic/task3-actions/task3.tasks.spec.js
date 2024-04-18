@@ -32,16 +32,16 @@ import { test,expect } from '@playwright/test';
   -Use regex, it's a powerful tool to find elements by text. Do not hesitate to use AI tools to generate them
 */
 
+const testData = {
+  firstName: 'John',
+  lastName: 'Doe',
+  email: 'test@email'
+};
+
 test('task3', async ({ page }) => {
 
     //first we need to navigate to the root page
     await page.goto('/');
-
-    const testData = {
-      firstName: 'John',
-      lastName: 'Doe',
-      email: 'test@email'
-    };
 
     //We accept cookies first, to not block the view of the elements we are looking for. You can turn them off in more "smart" way, but for now, this is enough.
     const accecptCookiesButton = page.getByTestId('uc-accept-all-button');

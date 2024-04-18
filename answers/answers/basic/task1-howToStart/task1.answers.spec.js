@@ -4,11 +4,11 @@ import { test,expect } from '@playwright/test';
   Welcome to the first task of our Playwright tutorial! 
   In this task you will learn how to initiate a simple test.
   Here is what you need to do:
-  -initiate a test with the title 'task 1'
-  -navigate to the root page
-  -check if the title have the word 'Unic' in it
-  -run the test with the command 'npm run test:tasks1'
-  -at the end, you should have a one test passed
+  -Initiate a test with the title 'task 1'
+  -Navigate to the root page
+  -Check if the title have the word 'Unic' in it
+  -Run the test with the command 'npm run test:tasks1'
+  -In the end, you should have a one test passed
   
   Helpful links:
   https://playwright.dev/docs/writing-tests#first-test - how to initiate a test

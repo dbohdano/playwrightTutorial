@@ -31,7 +31,7 @@ test('task2', async ({ page }) => {
     await page.goto('/');
 
     //We accept cookies first, to not block the view of the elements we are looking for. You can turn them off in more "smart" way, but for now, this is enough.
-    const accecptCookiesButton = page.getByTestId('uc-accept-all-button');('uc-accept-all-button');
+    const accecptCookiesButton = page.getByTestId('uc-accept-all-button');
     await accecptCookiesButton.waitFor({ state: 'visible' });
     await accecptCookiesButton.click();
 

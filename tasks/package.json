@@ -13,7 +13,12 @@
   "scripts": {
     "test": "SET NODE_ENV=dev & npx playwright test --headed",
     "test:ui": "SET NODE_ENV=dev & npx playwright test --headed --ui",
-    "test:task1": "SET NODE_ENV=dev & npx playwright test task1.tasks.spec.js --headed"
+    "test:task1": "SET NODE_ENV=dev & npx playwright test task1.tasks.spec.js --headed",
+    "test:task2": "SET NODE_ENV=dev & npx playwright test task2.tasks.spec.js --headed",
+    "test:task3": "SET NODE_ENV=dev & npx playwright test task3.tasks.spec.js --headed",
+    "test:task4": "SET NODE_ENV=dev & npx playwright test task4.tasks.spec.js --headed",
+    "test:task5": "SET NODE_ENV=dev & npx playwright test task5.tasks.spec.js --headed",
+    "test:task6": "SET NODE_ENV=dev & npx playwright test task6.tasks.spec.js --headed"
   },
   "dependencies": {
     "dotenv": "^14.0.0"
