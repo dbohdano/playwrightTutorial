@@ -35,6 +35,11 @@ Follow these steps to set up the project:
        ```
        npx playwright install
        ```
+5. **Configure .env file**:
+   - In each folder /answers/config and /tasks/config:
+     - Create file ".env.dev"
+     - Copy fields from ".env.example"
+     - Ask Dmytro Bohdanov on Teams or via email (dmytro.bohdanov@unic.com) for values
 
 Once you've completed these steps, your environment should be set up and ready for working on the Playwright tutorial project!
 
