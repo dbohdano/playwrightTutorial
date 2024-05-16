@@ -7,7 +7,7 @@ import { test,expect } from '@playwright/test';
   -initiate a test with the title 'task 1'
   -navigate to the root page
   -check if the title have the word 'Unic' in it
-  -run the test with the command 'npm run test:tasks1'
+  -run the test with the command 'npm run test:task1'
   -at the end, you should have a one test passed
   
   Helpful links:

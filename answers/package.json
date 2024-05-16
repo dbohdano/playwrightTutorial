@@ -18,7 +18,11 @@
     "test:task3": "SET NODE_ENV=dev & npx playwright test task3.answers.spec.js --headed",
     "test:task4": "SET NODE_ENV=dev & npx playwright test task4.answers.spec.js --headed",
     "test:task5": "SET NODE_ENV=dev & npx playwright test task5.answers.spec.js --headed",
-    "test:task6": "SET NODE_ENV=dev & npx playwright test task6.answers.spec.js --headed"
+    "test:task6": "SET NODE_ENV=dev & npx playwright test task6.answers.spec.js --headed",
+    "test:task7": "SET NODE_ENV=dev & npx playwright test task7.answers.spec.js --headed",
+    "test:task8": "SET NODE_ENV=dev & npx playwright test task8.answers.spec.js --headed",
+    "test:task9": "SET NODE_ENV=dev & npx playwright test task9.answers.spec.js --headed",
+    "test:task10": "SET NODE_ENV=dev & npx playwright test task10.answers.spec.js --headed"
   },
   "dependencies": {
     "dotenv": "^14.0.0"

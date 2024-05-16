@@ -16,7 +16,7 @@ import { test,expect } from '@playwright/test';
   -Fill the input fields with 'John', 'Doe' and 'test@email'
   -Create locator for 'I would like to subscribe to the newsletter' checkbox
   -Activate checkbox 'I would like to subscribe to the newsletter'
-  -run the test with the command 'npm run test:tasks3'
+  -run the test with the command 'npm run test:task3'
   -at the end, you should have a one test passed
   
   Helpful links:

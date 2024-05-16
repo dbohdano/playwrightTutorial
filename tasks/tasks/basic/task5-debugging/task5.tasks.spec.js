@@ -5,7 +5,9 @@ import { test, expect } from '@playwright/test';
   We will take a look on instruments, provided by Playwright to debug tests. Feel free to explore them on your own.
   Here is what you need to do:
   -Somebody broke our previous test! Find issues and fix it.
-  
+  -run the test with the command 'npm run test:task5'
+  -at the end, you should have a one test passed
+
   Helpful links:
   https://playwright.dev/docs/debug#run-a-test-from-a-specific-breakpoint - run test from a specific breakpoint
   https://playwright.dev/docs/debug#run-in-debug-mode-1 - run test in debug mode

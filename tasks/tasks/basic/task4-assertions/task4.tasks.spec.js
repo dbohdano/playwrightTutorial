@@ -12,7 +12,7 @@ import { test, expect } from '@playwright/test';
   -Check if 'Salutation' select item has attribute 'aria-invalid' equal to 'false'
   -Use non-retrying assertion to check if 'Salutation' select item has exactly 4 options. Hint: use locator binding to get 'option' count from 'Salutation' select item
   -Then, use .not assertion to check, if 'Salutation' label has not text 'Error'. Don't forget to create a locator for the label
-  -run the test with the command 'npm run test:tasks4'
+  -run the test with the command 'npm run test:task4'
   -at the end, you should have a one test passed
   
   Helpful links:

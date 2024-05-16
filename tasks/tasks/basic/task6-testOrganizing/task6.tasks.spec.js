@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
   Here is what you need to do:
   -Modify previos test from task4 and separate it into steps
   -Add test to test set with title 'task 6 test set'
-  -run the test with the command 'npm run test:tasks6'
+  -run the test with the command 'npm run test:task6'
   -at the end, you should have a one test passed
   
   Helpful links:
